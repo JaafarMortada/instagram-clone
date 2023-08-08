@@ -39,15 +39,15 @@
     align-items: center;
 }
 
-.gap5 {
+.gap-5 {
     gap: 5px;
 }
 
-.gap10 {
+.gap-10 {
     gap: 10px;
 }
 
-.gap20 {
+.gap-20 {
     gap: 20px;
 }
 
@@ -55,25 +55,29 @@
     width: 50%;
 }
 
+.width-70 {
+    width: 70%;
+}
+
 .width-100 {
     width: 100%;
 }
 
 .color-white{
-    color: #FFFAFA;
+    color: rgb(255, 250, 250);
 }
 
 .color-gray {
-    color: #2A2B2A;
+    color: rgb(42, 43, 42);
 }
 
 .color-red {
-    color: #ff6d6d;
+    color: rgb(255, 109, 109);
 }
 
 .b-circle {
     border-radius: 100%;
-    border: #ebedef 1px solid;
+    border: rgb(235, 237, 239) 1px solid;
     width: 48px;
     height: 48px;
 }
@@ -105,12 +109,12 @@
 
 .nav-links {
     text-decoration: none;
-    color: #2A2B2A;
+    color: rgb(42, 43, 42);
 }
 
 .nav-links:hover {
-    color: #FFE66D;
-    border-bottom: 2px solid #FFE66D;
+    color: rgb(255, 230, 109);
+    border-bottom: 2px solid rgb(255, 230, 109);
 }
 
 .links-wrapper {
@@ -133,10 +137,9 @@
     gap: 10px;
 }
 
-
 .card {
-    border: #D8E2DC 2px solid;
-    background-color: #FFFAFA;
+    border: rgb(216, 226, 220) 2px solid;
+    background-color: rgb(255, 250, 250);
     display: flex;
     padding: 32px;
     border-radius: 20px;
@@ -149,11 +152,11 @@
 }
 
 .card-title {
-    color: #2A2B2A;
+    color: rgb(42, 43, 42);
 }
 
 .label {
-    color: #2A2B2A;
+    color: rgb(42, 43, 42);
     padding: 5px;
     font-size: 14px;
     font-weight: 600;
@@ -162,7 +165,7 @@
 
 .input {
     outline: none;
-    border: 2px solid #ff6d6d;
+    border: 2px solid rgb(109, 160, 255);
     border-radius: 5px;
     padding: 5px;
     background-color: none;
@@ -170,13 +173,13 @@
 }
 
 .input:hover {
-    border-color: #ff8585;
+    border-color: rgba(109, 160, 255, 0.8);
 }
 
 .btn {
     font-family: "Google Sans",'Roboto',Arial,sans-serif;
-    background-color: #ff6d6d;
-    color: #FFFAFA;
+    background-color: rgb(109, 160, 255);
+    color: rgb(255, 250, 250);
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -189,7 +192,7 @@
 
 .textarea{
     outline: none;
-    border: 2px solid #FFE66D;
+    border: 2px solid rgb(255, 230, 109);
     border-radius: 5px;
     padding: 5px;
     background-color: none;
@@ -197,7 +200,7 @@
 }
 
 .textarea:hover{
-    border-color: #FFEB85;
+    border-color: rgb(255, 235, 133);
 }
 
 .overlay {
@@ -210,6 +213,10 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
+}
+
+.transition{
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0, 1);
 }

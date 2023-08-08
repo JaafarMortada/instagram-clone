@@ -1,11 +1,22 @@
+import { BrowserRouter, Route, Routes, createBrowserRouter } from 'react-router-dom';
 import './App.css';
+import Register from './components/forms/registration-from/Index';
 import './utilities.css'
+import SignInForm from './components/forms/signin-form/Index';
 
 function App() {
   return (
-    <div className="App">
-      Hello world!
-    </div>
+    <>
+      <div className="App">
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<SignInForm />} />
+            <Route path='/register' element={<Register />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
+
   );
 }
 
