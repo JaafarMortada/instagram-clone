@@ -50,7 +50,6 @@ class AuthController extends Controller
 
         $token = Auth::login($user);
         $user->token = $token;
-        $user->role = "user";
 
         return response()->json([
             'message' => 'User created successfully',
