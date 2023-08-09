@@ -1,0 +1,111 @@
+nav {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    width: 18rem;
+    overflow-x: hidden;
+    padding: 1.8rem 0.85rem;
+    color: #090E14;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.5s ease-in-out;
+    border-right: #111926 1px solid;
+}
+
+/*? sidebar top */
+
+.sidebar-top {
+    margin-bottom: 32px;
+}
+
+.logo__wrapper {
+    padding-left: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+}
+
+.sidebar-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-links li a {
+    margin: 8px 0px;
+    padding: 12px;
+    color: #090E14;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.sidebar-links li a svg {
+    height: 32px;
+    width: 32px;
+}
+
+
+.sidebar-links .link {
+    margin-left: 30px;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links .active {
+    width: 100%;
+    text-decoration: none;
+    background-color: #b9b9b9;
+    transition: all 100ms ease-in;
+    border-radius: 10px;
+}
+
+.sidebar-bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.sidebar-bottom ul {
+    margin: 6px 0px;
+}
+
+.sidebar__profile {
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+.avatar__wrapper {
+    position: relative;
+    display: flex;
+}
+
+.avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.avatar__name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: left;
+}
+
+.email {
+    font-size: 0.9rem;
+}
