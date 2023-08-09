@@ -12,10 +12,14 @@ class AuthController extends Controller
 {
     public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
+        try {
+            $request->validate([
+                'email' => 'required|string|email',
+                'password' => 'required|string',
+            ]);
+        } catch (\Throwable $e) {
+            return response()->json(["message" => 'failed']);
+        }
         $credentials = $request->only('email', 'password');
         $token = Auth::attempt($credentials);
         
@@ -36,13 +40,16 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+        try{
         $request->validate([
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8',
         ]);
-
+        } catch (\Throwable $e) {
+            return response()->json(["message" => 'failed']);
+        }
         $user = new User;
         $user->name = $request->name;
         $user->username = $request->username;
