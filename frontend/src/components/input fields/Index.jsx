@@ -1,4 +1,4 @@
-const TextInput = ({ label, name, type, placeholder, onChange }) => {
+const TextInput = ({ label, name, type, placeholder, value, onChange }) => {
     return (
         <div className="flex column label width-100">
             <label>{label}</label>
@@ -6,6 +6,7 @@ const TextInput = ({ label, name, type, placeholder, onChange }) => {
                 name={name}
                 type={type}
                 placeholder={placeholder}
+                value={value}
                 onChange={onChange}
                 className="input transition">
             </input>
