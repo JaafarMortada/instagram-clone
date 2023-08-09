@@ -15,4 +15,5 @@ Route::controller(AuthController::class)->group(function () {
 
 Route::post('/add_post', [PostController::class, "addPost"]);
 Route::get('/follow/{id}', [FollowerController::class, "follow"]);
+Route::get('/unfollow/{id}', [FollowerController::class, "unFollow"]);
 Route::get('/like/{post_id}', [LikeController::class, "like"]);
