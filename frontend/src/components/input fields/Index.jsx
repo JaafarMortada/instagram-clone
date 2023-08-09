@@ -1,6 +1,6 @@
 const TextInput = ({ label, name, type, placeholder, onChange }) => {
     return (
-        <div className="flex column label width-50">
+        <div className="flex column label width-100">
             <label>{label}</label>
             <input
                 name={name}
