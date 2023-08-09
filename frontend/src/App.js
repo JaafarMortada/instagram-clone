@@ -3,6 +3,7 @@ import './App.css';
 import Register from './components/forms/registration-from/Index';
 import './utilities.css'
 import SignInForm from './components/forms/signin-form/Index';
+import Home from './components/home/Home';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Routes>
             <Route path='/' element={<SignInForm />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/home' element={<div> home </div>} />
+            <Route path='/home' element={<Home/>} />
           </Routes>
         </BrowserRouter>
       </div>

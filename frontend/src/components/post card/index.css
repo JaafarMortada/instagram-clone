@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.post-card-container{
+    display: flex;
+    width: 25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid #6b6b6b;
+    background: #FFF;
+    margin-bottom: 1rem;
+}
+
+.post-card-container-header{
+    display: flex;
+    width: 25rem;
+    padding: 0.3125rem 0.4375rem;
+    align-items: center;
+    gap: 0.625rem;
+    background: #FEFEFE;
+}
+
+.poster-name{
+    display: flex;
+    width: 19rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #000;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.post-image{
+    width: 25rem;
+    height: fit-content;
+    object-fit: fill;
+}
+
+.post-image img{
+    width: 25rem;
+}
+
+.likes{
+    display: flex;
+    width: 25rem;
+    height: 2.1875rem;
+    padding: 0rem 2.5625rem 0rem 0.4375rem;
+    align-items: center;
+    gap: 0.625rem;
+    background: #FEFEFE;
+}
+
+.number-of-likes{
+    color: #1C1B1F;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.description{
+    display: flex;
+    width: 25rem;
+    padding: 0rem 0.4375rem 0.5625rem 0.4375rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description :nth-child(1){
+    color: #000;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.description :nth-child(2){
+    color: #000;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
