@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Follower extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     public function follows()
     {
         return $this->belongsTo(User::class);
