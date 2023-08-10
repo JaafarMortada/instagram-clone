@@ -6,9 +6,6 @@ use App\Models\Follower;
 use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
-    function searchProfiles() {
-
-    }
     function follow($username) {
         $auth_user = Auth::user();
         $user_to_follow = User::where('username', $username)->first();
@@ -38,5 +35,4 @@ class UserController extends Controller
         }
         return response()->json(['users' => $users]);
     }
-    
 }
