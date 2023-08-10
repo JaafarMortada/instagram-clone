@@ -23,10 +23,20 @@ class UserController extends Controller
         $auth_user = Auth::user();
         $user_to_unfollow = User::where('username', $username)->first();
         if($user_to_unfollow){
-            $auth_user->followed()->attach($user_to_unfollow->id);
+            $auth_user->followed()->detach($user_to_unfollow->id);
             return response()->json(['status' => 'unfollowed successfully']);
         }
         return response()->json(['status' => 'error']);
+    }
+
+    function searchUsers($username) {
+        $auth_user = Auth::user();
+        $users = User::where('username', 'LIKE', "%{$username}%")->where('id', '!=', $auth_user->id)->get();
+        $following = $auth_user->followed()->get();
+        foreach($users as $user){
+            $user->is_following = $following->contains($user);
+        }
+        return response()->json(['users' => $users]);
     }
     
 }
