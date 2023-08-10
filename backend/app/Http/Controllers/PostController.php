@@ -19,5 +19,5 @@ class PostController extends Controller
         return response()->json(["status" => $post]);
     }
 
-
+    
 }

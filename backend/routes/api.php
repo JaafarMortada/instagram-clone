@@ -5,6 +5,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('login', 'login');
@@ -14,6 +15,6 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::post('/add_post', [PostController::class, "addPost"]);
-Route::get('/follow/{id}', [FollowerController::class, "follow"]);
-Route::get('/unfollow/{id}', [FollowerController::class, "unFollow"]);
+Route::get('/follow/{username}', [UserController::class, "follow"]);
+Route::get('/unfollow/{username}', [UserController::class, "unfollow"]);
 Route::get('/like/{post_id}', [LikeController::class, "like"]);
