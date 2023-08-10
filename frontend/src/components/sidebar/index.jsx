@@ -2,6 +2,7 @@ import TextInput from '../input fields/Index';
 import './index.css'
 import { useState } from "react";
 import axios from "axios";
+import SearchCard from '../searchedUsers';
 const SideBar = () => {
 
     const [data, setData] = useState({
@@ -22,7 +23,7 @@ const SideBar = () => {
                 )
                 const users = response.data.users
                 if (users){
-                    searchedUsers(users)
+                    setSearchedUsers(users)
                     }
             }
         
@@ -65,6 +66,23 @@ const SideBar = () => {
                         </div>
                             
                         </li>
+                        {
+                searchedUsers?.length > 0
+                ? ( <li className="searched-user">
+                    {
+                        searchedUsers.map((user)=>(
+                            <SearchCard key={user.id} username={user.username} userFullName={user.name} following={user.is_following}/>
+                        ))
+                    }
+                </li> 
+                ) :
+                (
+                    <li>
+                        No users found
+                    </li>
+                )
+                
+            }
                     </ul>
                 </div>
                 <div className="sidebar-links sidebar-bottom">
