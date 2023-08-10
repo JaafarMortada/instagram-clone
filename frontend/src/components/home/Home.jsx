@@ -36,6 +36,7 @@ const Home = () => {
                         posts.map((post)=>(
                             <PostCard 
                             key={post.id} 
+                            post_id={post.id}
                             description={post.description} 
                             image_path={post.image_path}
                             likes={post.likes.length}
