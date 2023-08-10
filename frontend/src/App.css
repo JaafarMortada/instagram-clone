@@ -23,3 +23,14 @@
     top: 0;
     left: 0;
 }
+
+.post-card-container{
+    display: flex;
+    width: 25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1px solid #6b6b6b;
+    background: #FFF;
+    margin-bottom: 1rem;
+}
