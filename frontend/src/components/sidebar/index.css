@@ -59,7 +59,7 @@ nav {
 .sidebar-links .active {
     width: 100%;
     text-decoration: none;
-    background-color: #b9b9b9;
+    background-color: #f5e8e8;
     transition: all 100ms ease-in;
     border-radius: 10px;
 }
@@ -114,7 +114,7 @@ nav {
 }
 
 .transitionDiv {
-    background: rgb(247, 247, 247);
+    background: rgb(253, 243, 243);
     /* height: fit-content; */
     border-radius: 5px;
     width: 100%;

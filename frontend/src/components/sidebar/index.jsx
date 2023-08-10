@@ -35,7 +35,6 @@ const SideBar = () => {
 
     const handleFileChange = (event) => {
         setFileInput(event.target.files[0]);
-        console.log(fileInput);
     };
 
     const handlePostSubmit = async (event) => {
@@ -84,6 +83,8 @@ const SideBar = () => {
         if (users) {
             setSearchedUsers(users);
         }
+    } else {
+        setSearchedUsers([])
     }
 };
 
