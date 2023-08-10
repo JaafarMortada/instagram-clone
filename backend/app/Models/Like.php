@@ -12,10 +12,10 @@ class Like extends Model
     
     public function liked()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
-    public function likeOn()
+    public function likeon()
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(Post::class, 'post_id');
     }
 }
