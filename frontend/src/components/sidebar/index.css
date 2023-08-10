@@ -3,6 +3,7 @@ nav {
     background-color: rgb(255, 255, 255);
     width: 18rem;
     overflow-x: hidden;
+    overflow-y: auto;
     padding: 1.8rem 0.85rem;
     color: #090E14;
     display: flex;
@@ -109,3 +110,32 @@ nav {
 .email {
     font-size: 0.9rem;
 }
+
+.transitionDiv {
+    background: rgb(247, 247, 247);
+    height: fit-content;
+    border-radius: 5px;
+    width: 100%;
+    margin: 1rem auto;
+  }
+  
+  @keyframes inAnimation {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes outAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
