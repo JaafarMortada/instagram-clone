@@ -1,7 +1,8 @@
 .search-card-container{
+    background-color: rgb(253, 240, 240);
     border: 1px solid #6b6b6b;
-    margin: 5px 1rem 0 5px;
+    margin: 15px 1rem 0 5px;
     border-radius: 5px;
     padding: 10px 5px 10px;
-    width: 89%;
+    width: 98%;
 }

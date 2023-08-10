@@ -2,6 +2,7 @@ import TextInput from "../../input fields/Index";
 import { useNavigate,Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import InstagramLogo from "../../instagramLogo";
 
 const Register = () => {
 
@@ -24,7 +25,8 @@ const Register = () => {
                 const response = await axios.post("http://127.0.0.1:8000/api/register", data)
                 const message = response.data.message
                 if (message==='User created successfully'){
-                    navigate("/")
+                    localStorage.setItem("token", response.data.user.token)
+                    navigate("/home")
                 } else {
                     const register_btn = document.getElementById("register-btn")
                     register_btn.innerHTML = 'Failed'
@@ -42,6 +44,7 @@ const Register = () => {
     }
     return ( 
         <div className="flex column width-30 center gap-5 form-container">
+            <InstagramLogo/>
             <TextInput 
                 name = {"name"}
                 label={"Enter your name:"} 
@@ -82,8 +85,9 @@ const Register = () => {
                 placeholder={"Verify your password"}
                 onChange={handleDataChange}
             />
-            <Link to={("/")} className="color-light-blue no-deco">Log in</Link>
             <button className="btn width-50 transition" id="register-btn" onClick={handleSubmit}>Register</button>
+            <span>Have an account?</span>
+            <Link to={("/")} className="color-light-blue no-deco">Log in</Link>
         </div>
     );
 }

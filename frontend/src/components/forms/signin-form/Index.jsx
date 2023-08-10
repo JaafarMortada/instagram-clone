@@ -2,6 +2,7 @@ import TextInput from "../../input fields/Index";
 import { useNavigate,Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import InstagramLogo from "../../instagramLogo";
 
 const SignInForm = () => {
     localStorage.clear()
@@ -37,7 +38,8 @@ const SignInForm = () => {
         }
     
     return (
-        <div className="flex column width-30 center gap-10 form-container">
+        <div className="flex column width-30 center gap-10 form-container ">
+            <InstagramLogo/>
             <TextInput
                 name = {"email"}
                 label={"Enter Your E-mail:"}
@@ -54,8 +56,10 @@ const SignInForm = () => {
                 placeholder={"Enter Your Password"}
                 onChange={handleDataChange}
             />
+            
+            <button className="btn transition" id="login-btn" onClick={handleSubmit}>Log in</button>
+            <span>Don't have an account? </span>
             <Link to={("/register")} className="color-light-blue no-deco">Sign up</Link>
-            <button className="btn width-50 transition" id="login-btn" onClick={handleSubmit}>Log in</button>
         </div>
     );
 };
