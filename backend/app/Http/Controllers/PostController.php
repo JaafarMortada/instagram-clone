@@ -19,5 +19,15 @@ class PostController extends Controller
         return response()->json(["status" => $post]);
     }
 
-    
+    function getPosts(){
+        $user = Auth::user();
+        $posts = Post::whereIn('user_id', $user->followed->pluck('id'))->orderBy('created_at', 'desc')->get();
+        foreach ($posts as $post){
+            $post->is_liked = $post->likes->contains('user_id', $user->id);
+        }
+        return response()->json([
+            'status' => 'success',
+            'posts' => $posts,
+        ]);
+    }
 }
