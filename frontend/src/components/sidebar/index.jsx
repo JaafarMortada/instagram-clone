@@ -60,10 +60,20 @@ const SideBar = () => {
             console.log("Response from server:", response.data);
         } catch (error) {
             console.error("Error sending data:", error);
+            
+            const add_post_btn = document.getElementById("add-post-btn")
+            add_post_btn.innerHTML = 'Failed'
+            add_post_btn.style.backgroundColor = 'rgb(255, 109, 109)'
+            setTimeout(() => { 
+                add_post_btn.innerHTML = 'Register' 
+                add_post_btn.style.backgroundColor = 'rgb(109, 160, 255)'
+            }, 3000)
+                
         }
     };
 
     const handleSearch = async () => {
+        if(data.username){
         const response = await axios.get(
             `http://127.0.0.1:8000/api/search/${data.username}`,
             {
@@ -74,7 +84,8 @@ const SideBar = () => {
         if (users) {
             setSearchedUsers(users);
         }
-    };
+    }
+};
 
     return (
         <nav>
@@ -122,7 +133,7 @@ const SideBar = () => {
                                         label={"Choose an image"}
                                         onChange={handleFileChange}
                                     />
-                                    <button className="add-post-btn" onClick={handlePostSubmit}>Post</button>
+                                    <button className="add-post-btn" id="add-post-btn" onClick={handlePostSubmit}>Post</button>
                                 </div>
                             )
                         }
